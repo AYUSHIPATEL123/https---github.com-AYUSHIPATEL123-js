@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #448d8a;
+            color:white;
+        }
+    
+        .canvas {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #2c3e50;
+            padding: 20px;
+            margin-top: 0px;
+            border-radius: 10px;
+        }
+
+        h3{
+            color: #2cbcd2;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #2980b9;
+        }
+    
+        #result {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        span {
+            font-weight: bold;
+            color: #e42727;
+            font-size: 1.4em;
+        } 
+        
+        #start-over{
+            padding: 10px 20px;
+            background-color: #f0db1f;
+            color: black;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+    <div class="canvas">
+      <h1>Random Number Guessing Game</h1>
+      <h3>Guess a number between 1 and 100</h3>
+      <h3>you have 10 attempts</h3>
+       <form method="post">
+            <input type="number" id="guess" placeholder="Enter your guess">
+            <button type="submit" id="check-button">Check</button>
+       </form>
+       <div id="allmessages">
+            previous guess: <span id="previous-guess"></span>
+            <br>
+            you have <span id="attempts">10</span> attempts left.
+            <h3 id="result"></h3>
+        </div>
+    </div>
+</body>
+<script src="project-4.js"></script>
+</html>
