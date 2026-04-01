@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> To do Website</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #8c4bb883;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .todo {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 95%;
+        }
+        button{
+            padding:10px;
+            width: 98%;
+            background-color: #bc53df;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            box-shadow: 2px  2px 5px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        table{
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            width: 33.33%;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        #del-btn{
+            background-color: #e74c3c;
+            border: none;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        input[type="checkbox"]{
+            transform: scale(1.5);
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="todo">
+        <h1>To do Website</h1>
+        <input type="text" id="taskInput" placeholder="Enter a task">
+
+        <button id="addTask" type="button">Add Task</button>
+        <br>
+            <table>
+                <thead style="background-color: #593566; color: white;">
+                    <tr>
+                        <th>Task</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="taskTableBody">
+                    <!-- Tasks will be added here dynamically-->
+                </tbody>
+            </table>
+        
+    </div>
+</body>
+<script src="project-9.js"></script>
+</html>
