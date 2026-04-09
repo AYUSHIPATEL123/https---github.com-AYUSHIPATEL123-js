@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search & filter items</title>
+    <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #cabbbb;
+    }   
+   
+    #list {
+        display:flex;
+        flex-direction: column;
+        gap: 2px;
+        align-items: center;
+        justify-content: center;
+        list-style-type: none;
+        background-color: #f1f1f1;
+        padding: 10px;
+        border: 1px solid #a38484;
+        
+    }
+
+    hr{
+        margin: 20px 0;
+        color: #981212;
+    }
+    #search {
+        padding: 5px;
+        width: 200px;
+        diplay: inline-block;
+
+    }
+    button {
+        padding: 5px 10px;
+        background-color: #981212;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+
+    .cat_list{
+        padding: 5px;
+        width: 200px;
+        cursor: pointer;
+        color: #000;
+        background-color: #e6c525;
+        align-items: center;
+    }
+    #filter{
+        padding: 5px;
+        width: 200px;
+        cursor: pointer;
+        color: #000;
+        background-color: #ffcfbf;
+    }
+
+    #obtained_list{
+        list-style-type: none;
+        height: 400px;
+        width: 300px;
+        background-color: #f1f1f1;
+        padding: 10px;
+        border: 1px solid #a38484;
+
+    }
+    </style>
+
+    
+</head>
+<body>
+    <h1>Items</h1>
+    <ul id="list"> 
+
+    </ul>
+
+    <h3>Search Items</h3>
+    <input type="search" name="search" id="search" placeholder="Search items...">
+    <button id="search-button">Search</button>
+   
+
+    <br>
+    <hr>
+    <h3>Filtered Items</h3>
+    <select name="filter" id="filter">
+        
+    </select>
+    <hr>
+    <h3>Obtained Items</h3>
+    <ul id="obtained_list">
+
+    </ul>
+    
+
+</body>
+<script src="script.js"></script>
+</html>
