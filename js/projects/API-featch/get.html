@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #90f09d;
+        }
+        #data{
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td{
+            border: 2px solid #776868;
+            padding: 8px;
+            text-align: center:"";
+            background-color: #fab0b0;
+        }
+
+        button{
+            padding: 10px 20px;
+            background-color: #d7612e;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #loader{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="loader" style="display: none;">
+                <img src="../images/loader.gif" alt="Loading..." width="50px">
+        </div>
+    <h1>My User Data</h1>
+    
+    <div id="data">
+        <button onclick="getUsers()">Fetch User Data</button>
+        <br>
+        <br>   
+        
+        
+        <table>
+            <thead>
+                <th>Name</th>
+                
+                <th>Email</th>
+                
+                <th>Phone</th>
+            </th> 
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>   
+             
+        </table>
+    </div>
+</body>
+<script src="get.js"></script>
+</html>
