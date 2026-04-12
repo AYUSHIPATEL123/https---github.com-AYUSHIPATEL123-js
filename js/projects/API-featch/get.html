@@ -8,6 +8,7 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
             background-color: #90f09d;
+            text-align: center;
         }
         #data{
             width: 80%;
@@ -40,6 +41,23 @@
         #loader{
             text-align: center;
         }
+
+        #pagination{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin: 30px;    
+        }
+        .pagination-btn{
+            padding: 10px 20px;
+            background-color: #f30808a2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -49,11 +67,11 @@
     <h1>My User Data</h1>
     
     <div id="data">
+
         <button onclick="getUsers()">Fetch User Data</button>
         <br>
         <br>   
-        
-        
+
         <table>
             <thead>
                 <th>Name</th>
@@ -68,6 +86,12 @@
             </tbody>   
              
         </table>
+
+        <div id="pagination">
+            <button class="pagination-btn" onclick="previousPage()">Previous</button>
+            <span id="pageInfo"></span>
+            <button class="pagination-btn" onclick="nextPage()">Next</button>
+        </div>
     </div>
 </body>
 <script src="get.js"></script>
