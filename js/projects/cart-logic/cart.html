@@ -4,12 +4,126 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: #adbbf3bf;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .con_1{
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .con_2{
+            display: flex;
+            gap: 30px;
+            margin-bottom: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .total{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .add_to_cart{
+            padding: 10px 20px;
+            background-color: #0e1a51;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        .con_3{
+            width: 150px;
+            height: 150px;
+            background-color: #649cb6;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+        }
+
+        #calculateTotal{
+            padding: 10px 20px;
+            background-color: #dcf500;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            color: #333;
+            border: 2px solid #ccc;
+        }
+
+        @media (max-width: 800px) {
+            .con_1 {
+                width: 90%;
+            }
+            .con_2 {
+                flex-direction: column;
+            }
+            .con_3 {
+                width: 90%;
+                height: auto;
+            }
+            table {
+                width: 100%;
+            }
+        }
+        table {
+            width: 55%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th , td {
+            padding: 10px;
+            text-align: center;
+            background-color: #c1e1ff;
+        }
+        #totalPrice{
+            font-size: 1.2em;
+            font-weight: bold;
+            border: 2px solid #ccc;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
+            <h1>Cart Logic</h1>
+
     <div class="con_1">
-        <h1>Cart Logic</h1>
         <div class="con_2">
     
+        </div>
+        <div class="total">
+            <button type="button" id="calculateTotal">Calculate Total</button>
+            <br>
+            <table border=1>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id="cartItems">
+                    
+                </tbody>
+            </table>
+            <p id="totalPrice">Total Price: $0.00</p>
         </div>
     </div>    
 </body>
